@@ -100,6 +100,10 @@ public class PhotosList extends AppCompatActivity {
             try {
                 Bundle bundle = intent.getExtras();
                 int photoID = bundle.getInt("photoID");
+                FileInputStream fis = openFileInput("data.ser");
+                ObjectInputStream in = new ObjectInputStream(fis);
+                albums = (ArrayList<Album>) in.readObject();
+
                 albums.get(position).getPhotos().add(new Photo(photoID));
                 FileOutputStream fos = openFileOutput("data.ser", MODE_PRIVATE);
                 ObjectOutputStream oos = new ObjectOutputStream(fos);
