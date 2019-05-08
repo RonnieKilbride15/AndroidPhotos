@@ -69,6 +69,7 @@ public class SearchActivity extends AppCompatActivity {
                         if(albums.get(i).getPhotos().get(j).getTags().get(k).tagType.equals("location")
                                 && albums.get(i).getPhotos().get(j).getTags().get(k).tagValue.contains(tagValue)){
                             searchResults.add(albums.get(i).getPhotos().get(j).getPhotoID());
+                            break;
                         }
                     }
                 }
@@ -80,6 +81,7 @@ public class SearchActivity extends AppCompatActivity {
                         if(albums.get(i).getPhotos().get(j).getTags().get(k).tagType.equals("person")
                                 && albums.get(i).getPhotos().get(j).getTags().get(k).tagValue.contains(tagValue)){
                             searchResults.add(albums.get(i).getPhotos().get(j).getPhotoID());
+                            break;
                         }
                     }
                 }
