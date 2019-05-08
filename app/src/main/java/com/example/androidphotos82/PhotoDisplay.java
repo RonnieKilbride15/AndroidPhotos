@@ -200,6 +200,7 @@ public class PhotoDisplay extends AppCompatActivity {
             albums = (ArrayList<Album>) in.readObject();
         }catch(Exception e){}
 
+
         tags = new ArrayList<String>();
         for(int i = 0; i < albums.get(albumPosition).getPhotos().get(photoPosition).getTags().size(); i++){
             tags.add(albums.get(albumPosition).getPhotos().get(photoPosition).getTags().get(i).tagType + ": " +
