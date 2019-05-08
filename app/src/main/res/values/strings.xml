@@ -17,4 +17,6 @@
     <string name="title_activity_photo_display">PhotoDisplay</string>
     <string name="title_activity_add_tag">AddTag</string>
     <string name="title_activity_move_to_album">MoveToAlbum</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_search_results">SearchResults</string>
 </resources>

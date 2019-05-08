@@ -31,6 +31,7 @@ public class AddAlbum extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         Bundle bundle = getIntent().getExtras();
         albums = new ArrayList<Album>();
         try{

@@ -31,7 +31,9 @@ public class MoveToAlbum extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_to_album);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Move To Album");
         setSupportActionBar(toolbar);
+
 
         Bundle bundle = getIntent().getExtras();
         albums = new ArrayList<Album>();

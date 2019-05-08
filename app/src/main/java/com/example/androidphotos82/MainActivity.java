@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     public static final int ADD_ALBUM_CODE=1;
     public static final int EDIT_ALBUM_CODE=2;
     public static final int VIEW_PHOTOS_LIST=3;
+    public static final int SEARCH_CODE = 4;
+
 
 
     @Override
@@ -67,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_add:
                 createAnAlbum();
+                return true;
+            case R.id.action_search:
+                searchForPhotos();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -81,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddAlbum.class);
         intent.putExtras(bundle);
         startActivityForResult(intent, ADD_ALBUM_CODE);
+    }
+
+    public void searchForPhotos(){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("albums_list",albums);
+        Intent intent = new Intent(this, SearchActivity.class);
+        intent.putExtras(bundle);
+        startActivityForResult(intent, SEARCH_CODE);
     }
 
 

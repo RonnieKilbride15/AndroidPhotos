@@ -63,6 +63,8 @@ public class PhotosList extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.add_menu,menu);
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(albumName);
+        MenuItem item = menu.findItem(R.id.action_search);
+        item.setVisible(false);
         return super.onCreateOptionsMenu(menu);
 
     }

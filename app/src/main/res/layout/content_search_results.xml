@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".PhotosList"
-    tools:showIn="@layout/activity_photos_list">
+    tools:context=".SearchResults"
+    tools:showIn="@layout/activity_search_results">
 
     <GridView
-        android:id="@+id/gridView"
+        android:id="@+id/searchResultsGridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="3"
