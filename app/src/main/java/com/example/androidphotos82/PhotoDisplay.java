@@ -190,7 +190,7 @@ public class PhotoDisplay extends AppCompatActivity {
             return;
         }
 
-        Bundle bundle = new Bundle();
+        Bundle bundle = getIntent().getExtras();
         int currentPhotoPosition = bundle.getInt("position");
         int currentAlbumPosition = bundle.getInt("albumPosition");
         try{
